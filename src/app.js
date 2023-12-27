@@ -61,7 +61,7 @@ async function initMap() {
      // Set current max zoom level
     maxZoomService = new google.maps.MaxZoomService();
     maxZoomService.getMaxZoomAtLatLng(myLatlng, (result) => {
-      result.zoom > 20 ? map.setZoom(20) : map.setZoom(result.zoom + 1)
+      result.zoom > 20 ? map.setZoom(20) : map.setZoom(result.zoom)
     });
 
     // Line drawn on selection
