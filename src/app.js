@@ -61,7 +61,7 @@ async function initMap() {
      // Set current max zoom level
     maxZoomService = new google.maps.MaxZoomService();
     maxZoomService.getMaxZoomAtLatLng(myLatlng, (result) => {
-      map.setZoom(result.zoom + 2);
+      result.zoom > 20 ? map.setZoom(20) : map.setZoom(result.zoom + 1)
     });
 
     // Line drawn on selection
@@ -89,7 +89,7 @@ function addLatLng(event) {
   sides.push(event.latLng);
 
   // If user selects 4 points then calculate the area.
-  if(sides.length == 3) {
+  if(sides.length == 4) {
     let polygonOptions = { path:sides,
       strokeColor:"#ffffff",
       fillColor:"black" 
@@ -99,10 +99,8 @@ function addLatLng(event) {
     polygon.setMap(map);
 
     infoCont.style.display = "block";
-    infoText.innerHTML = `The area of selected points is - ${google.maps.geometry.spherical.computeArea(sides).toFixed(2)} sq m<br>
-    Length of sides -<br>
-    1: ${computeLength(sides.g[0], sides.g[1])} m, 2: ${computeLength(sides.g[1], sides.g[2])} m,<br>
-    3: ${computeLength(sides.g[2], sides.g[3])} m, 4: ${computeLength(sides.g[3], sides.g[0])} m`    
+    infoText.innerHTML = `The area of selected points is - ${google.maps.geometry.spherical.computeArea(sides).toFixed(2)} sqm<br>
+    Length of sides - ${computeLength(sides.g[0], sides.g[1])} m, ${computeLength(sides.g[1], sides.g[2])} m, ${computeLength(sides.g[2], sides.g[3])} m, ${computeLength(sides.g[3], sides.g[0])} m`    
   } else {
     infoCont.style.display = "none";
   }

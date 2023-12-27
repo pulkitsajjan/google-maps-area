@@ -57,9 +57,9 @@ input {
 #info-container {
     display: none;
     position: absolute;
-    width: 30%;
+    width: 35%;
     top: 1%;
-    left: 35%;
+    left: 32.5%;
     z-index: 5;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(1px);
