@@ -1,0 +1,74 @@
+html,
+body,
+#map {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px 20px 0px 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* White background with opacity */
+    backdrop-filter: blur(1px); /* Apply blur effect */
+    border-radius: 10px;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 10px 15px 12px rgba(0,0,0,0.22);
+}
+
+#statsContainer {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    padding: 20px 20px 0px 20px;
+    border-radius: 2px;
+}
+
+
+form {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+#submitBtn {
+    padding: 10px;
+    background-color: #303030;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#info-container {
+    display: none;
+    position: absolute;
+    width: 30%;
+    top: 1%;
+    left: 35%;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(1px);
+    padding: 5px;
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+}
+
+#info-text {
+    tab-size: 2;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Pulkit Anand Google maps</title> 
+    <link rel="stylesheet" type="text/css" href="./styles.css" />   
+    <script src="./app.js" defer></script>    
+  </head>
+  <body>
+    
+    <div id="container">
+      <h2>Enter Latitude and Longitude value</h2>
+      <form>
+          <label for="latitude">Latitude:</label>
+          <input type="number" id="latitude" name="latitude">
+
+          <label for="longitude">Longitude:</label>
+          <input type="number" id="longitude" name="longitude">
+
+          <button id="submitBtn" type="submit">Save Coordinates</button>
+      </form>
+    </div>
+    <div id="info-container">
+      <h2 id="info-text"></h2>
+    </div>
+    <div id="map"></div>
+
+  </body>
+</html>
