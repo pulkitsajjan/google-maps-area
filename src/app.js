@@ -89,7 +89,7 @@ function addLatLng(event) {
   sides.push(event.latLng);
 
   // If user selects 4 points then calculate the area.
-  if(sides.length > 3) {
+  if(sides.length == 3) {
     let polygonOptions = { path:sides,
       strokeColor:"#ffffff",
       fillColor:"black" 
