@@ -18,7 +18,7 @@ let bgWhite = document.getElementById('container');
 let infoCont = document.getElementById('info-container');
 let infoText = document.getElementById('info-text');
 
-let submitBtn = document.getElementById("submitBtn");
+let submitBtn = document.getElementById("submit-button");
 submitBtn.addEventListener("click", saveCoordinates)
 
 //Get input cooridnates from user
@@ -31,9 +31,7 @@ function saveCoordinates() {
     lng: Number(longitude)
   };
 
-  (async () => {        
-    map = await initMap();
-  })();
+  initMap();
 
   bgWhite.style.display = "none";
   return false;
@@ -61,7 +59,7 @@ async function initMap() {
      // Set current max zoom level
     maxZoomService = new google.maps.MaxZoomService();
     maxZoomService.getMaxZoomAtLatLng(myLatlng, (result) => {
-      result.zoom > 20 ? map.setZoom(20) : map.setZoom(result.zoom)
+      result.zoom > 19 ? map.setZoom(19) : map.setZoom(result.zoom)
     });
 
     // Line drawn on selection
@@ -73,8 +71,8 @@ async function initMap() {
       fillOpacity: 0.05
     });
     lineDrawn.setMap(map);
-    map.addListener('click', addLatLng);
-    return map
+    
+    map.addListener('click', drawPolygon);
 }
 
 // Calculate the length between 2 coordinates
@@ -84,7 +82,7 @@ function computeLength(coord1, coord2){
 
 
 // Add clicked points and calculate measurements
-function addLatLng(event) {
+function drawPolygon(event) {
   sides = lineDrawn.getPath();
   sides.push(event.latLng);
 
