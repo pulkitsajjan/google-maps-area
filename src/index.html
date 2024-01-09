@@ -2,9 +2,10 @@
 <html>
   <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <title>Pulkit Anand Google maps</title> 
+    <title>Pulkit Anand assessment</title> 
     <link rel="stylesheet" type="text/css" href="./styles.css" />   
-    <script src="./app.js" defer></script>    
+    <script src="./app.js" defer></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
   </head>
   <body>
     
@@ -20,10 +21,26 @@
           <button id="submit-button" type="submit">Save Coordinates</button>
       </form>
     </div>
-    <div id="info-container">
-      <h2 id="info-text"></h2>
-    </div>
-    <div id="map"></div>
 
+    <button id="draw-button" type="submit">Draw layer</button>
+    <button id="cal-button" type="submit">Calculate area</button>
+    
+    <div id="info-container">
+      <div id="print-container">
+        <p class="popup-text" id="coord-text"></p>
+        <p class="popup-text" id="area-text"></p>
+  
+        <p class="popup-text" id="hi-text"><b>Length of sides area:</b> </p>
+        <ol class="popup-text" id="length-list"></ol>
+      </div>
+
+      <div class="popup-buttons">
+        <button id="hide-button" type="submit">Hide layer</button>
+        <button id="show-button" type="submit">Show layer</button>
+        <button id="print-button" type="submit">Print</button>
+      </div>
+    </div>
+
+    <div id="map"></div>
   </body>
 </html>

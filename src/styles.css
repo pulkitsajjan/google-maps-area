@@ -47,18 +47,61 @@ input {
 
 #info-container {
     display: none;
-    position: absolute;
-    width: 35%;
-    top: 1%;
-    left: 32.5%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
     z-index: 5;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(1px);
-    padding: 5px;
-    text-align: center;
-    font-family: 'Roboto','sans-serif';
-    line-height: 30px;
+    padding: 25px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 26px;
 }
 
 #info-text {
-font-size: 20px;}
+    font-size: 20px;
+}
+
+#draw-button, #cal-button{
+    display: none;
+    position: absolute;
+    width: 6%;
+    bottom: 1%;
+    left: 47%;
+    z-index: 5;
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+.popup-text{
+    margin-bottom: 0px 0px 15px 0px;
+}
+
+.popup-buttons{
+    position: fixed;
+    bottom: 75px;
+}
+.popup-buttons button{
+    padding: 10px;
+    background-color: #413f3f;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#print-button{
+    position: fixed;
+    right: 20px;
+    padding: 10px;
+    background-color: #413f3f;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+}

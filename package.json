@@ -10,8 +10,11 @@
   "license": "Apache 2.0",
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.13.9",
-    "@googlemaps/three": "^4.0.7",
-    "three": "^0.138.3"
+    "@googlemaps/three": "^4.0.8",
+    "@lume/three-meshline": "^4.0.5",
+    "@ubilabs/threejs-overlay-view": "^0.7.1",
+    "three": "^0.138.3",
+    "vercel": "^33.0.1"
   },
   "devDependencies": {
     "webpack": "^5.70.0",
